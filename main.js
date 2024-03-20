@@ -41,12 +41,13 @@ $("#play").on("click", function () {
     console.log(getRandomInt());
     $(`#${i}`).append(`<img  class="image" src=${logos.splice(x, 1)}>`);
   }
+  console.log(logos);
   //this setTimeOut function hides the images after they've been appended and replaces them with 'cars' png. then calls the playing function and appends the stop watch.
   setTimeout(function () {
     $(".image").hide();
     for (var j = 1; j < 17; j++) {
       $(`#${j}`).append(
-        `<img  class="cars" src="./Images/S0-Cars-removebg-preview.png" alt="cars" >`
+        `<img  class="cars" src="./Images/S0-Cars-removebg-preview.png" alt="cars" ></img>`
       );
     }
     playing();
